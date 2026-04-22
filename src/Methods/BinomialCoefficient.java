@@ -5,7 +5,6 @@ public class BinomialCoefficient {
         int binomialCoefficient = binCoff();
         System.out.println("The BC is: "+binomialCoefficient);
 
-
     }
     public static int binCoff(){
         int a = nFact(5);
@@ -45,5 +44,4 @@ public class BinomialCoefficient {
         }
         return n_minus_r_fact;
     }
-
 }
