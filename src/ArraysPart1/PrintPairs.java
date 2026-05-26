@@ -6,15 +6,15 @@ public class PrintPairs {
         printPairs(numbers);
     }
     public static void printPairs(int numbers[]){
-        int count = 0;
-        for(int i = 0; i<=numbers.length-1; i++){
+        int total_pair = 0;
+        for(int i = 0; i<numbers.length; i++){
             int current = numbers[i];
-            for(int j = i+1; j<=numbers.length-1; j++){
+            for(int j = i+1; j<numbers.length; j++){
                 System.out.print("("+current+","+numbers[j]+")");
-                count++;
+                total_pair++;
             }
-            System.out.println();
+         ;   System.out.println();
         }
-        System.out.println(count);
+        System.out.println("Count: "+total_pair);
     }
 }
