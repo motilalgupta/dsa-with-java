@@ -6,6 +6,8 @@ public class PrintSubArrays {
         printSubArrays(numbers);
     }
     public static void printSubArrays(int numbers[]){
+        int totalSubArrays = 0;
+        int firstSum = 0, secondSum = 0, thirdSum = 0, fourthSum=0;
         for(int i = 0; i<numbers.length; i++){
             int start = i;
             for(int j = i; j<numbers.length; j++){
@@ -13,9 +15,10 @@ public class PrintSubArrays {
                 for(int k = start; k<=end; k++){
                     System.out.print(numbers[k]+" ");
                 }
-                System.out.println();
+                totalSubArrays++;
             }
             System.out.println();
         }
+        System.out.println("Total sub arrays: "+totalSubArrays);
     }
 }
