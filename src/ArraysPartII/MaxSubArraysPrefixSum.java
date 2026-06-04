@@ -1,0 +1,30 @@
+package ArraysPartII;
+
+public class MaxSubArraysPrefixSum {
+    public static void main(String[] args) {
+        int numbers[] = {1,-2,6,-1,3};
+        maxSubArraysPrefixSum(numbers);
+    }
+    public static void maxSubArraysPrefixSum(int numbers[]){
+        int currentSum = 0;
+        int maxSum = numbers[0];
+        int prefix[] = new int[numbers.length];
+        for(int i = 1; i<prefix.length; i++){
+            prefix[i] = prefix[i - 1] + numbers[i];
+        }
+
+        for(int i = 0; i<numbers.length; i++){
+            int start = i;
+            for(int j = i; j<numbers.length; j++){
+                int end = j;
+                currentSum = start == 0 ? prefix[end] : prefix[end] - prefix[start-1];
+
+                if(maxSum < currentSum){
+                    maxSum = currentSum;
+                }
+            }
+        }
+        System.out.println("Max sum is: "+maxSum);
+    }
+
+}
