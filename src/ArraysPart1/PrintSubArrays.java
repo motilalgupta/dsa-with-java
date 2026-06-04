@@ -7,7 +7,6 @@ public class PrintSubArrays {
     }
     public static void printSubArrays(int numbers[]){
         int totalSubArrays = 0;
-        int firstSum = 0, secondSum = 0, thirdSum = 0, fourthSum=0;
         for(int i = 0; i<numbers.length; i++){
             int start = i;
             for(int j = i; j<numbers.length; j++){
