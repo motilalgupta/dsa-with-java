@@ -10,10 +10,10 @@ public class MaxSubArraysSumKadaneAlgo {
         int maxSum = Integer.MIN_VALUE;
 
         for(int i = 0; i<numbers.length; i++){
+            currentSum += numbers[i];
             if(currentSum < 0){
                 currentSum = 0;
             }
-            currentSum += numbers[i];
             maxSum = Math.max(maxSum, currentSum);
         }
         System.out.println("Maximum is: "+maxSum);

@@ -8,7 +8,7 @@ public class MaxSubArraysPrefixSum {
     public static void maxSubArraysPrefixSum(int numbers[]){
         int currentSum = 0;
         int maxSum = numbers[0];
-        int prefix[] = new int[numbers.length];
+        int prefix[] = new int[numbers.length]; // 1, -1, 5, 4, 7
         for(int i = 1; i<prefix.length; i++){
             prefix[i] = prefix[i - 1] + numbers[i];
         }
@@ -26,5 +26,4 @@ public class MaxSubArraysPrefixSum {
         }
         System.out.println("Max sum is: "+maxSum);
     }
-
 }
