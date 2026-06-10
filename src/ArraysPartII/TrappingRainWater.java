@@ -30,5 +30,4 @@ public class TrappingRainWater {
         }
         return trappedWater;
     }
-
 }
