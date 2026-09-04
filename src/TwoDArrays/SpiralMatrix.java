@@ -10,6 +10,7 @@ public class SpiralMatrix {
         int startCol = 0, endCol = matrix[0].length-1;
 
         while(startRow <= endRow && startCol <= endCol){
+
             //top
             for(int j = startCol; j<=endCol; j++){
                 System.out.print(matrix[startRow][j]+" ");
