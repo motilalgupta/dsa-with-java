@@ -17,6 +17,7 @@ public class MaxSubArraysPrefixSum {
             int start = i;
             for(int j = i; j<numbers.length; j++){
                 int end = j;
+
                 currentSum = start == 0 ? prefix[end] : prefix[end] - prefix[start-1];
 
                 if(maxSum < currentSum){
